@@ -1,0 +1,357 @@
+/* --- Color Variables & Reset --- */
+:root {
+    --color-cream: #FAF9F6;
+    --color-brown-dark: #5D4037;
+    --color-brown-light: #BCAAA4;
+    --color-white: #ffffff;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-cream);
+    color: var(--color-brown-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+a {
+    color: var(--color-brown-dark);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-brown-light);
+}
+
+/* --- Global Sections --- */
+.section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-brown-light);
+    display: inline-block;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+/* --- Hero Section Layout --- */
+.hero-section {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-cream);
+    padding: 80px 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.hero-left {
+    flex: 0 0 45%;
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.hero-right {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 20px;
+}
+
+/* --- Profile Photo Styling --- */
+.idphoto {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid var(--color-brown-dark);
+    position: relative;
+    margin: 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.idphoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* --- Hero Right Content Styling --- */
+.portfolio-heading {
+    font-size: 3.5rem;
+    color: var(--color-brown-dark);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.hero-name {
+    font-size: 2.2rem;
+    color: var(--color-brown-dark);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-role-badge {
+    display: inline-block;
+    background-color: var(--color-brown-dark);
+    color: var(--color-cream);
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    color: #6d5f57;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-brown-dark);
+    color: var(--color-cream);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--color-brown-light);
+    color: var(--color-brown-dark);
+}
+
+/* --- Project and Skills Grid (Work Section) --- */
+.work-section {
+    background-color: var(--color-white);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    padding: 30px;
+    background-color: var(--color-cream);
+    border-radius: 8px;
+    border-left: 5px solid var(--color-brown-light);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+    color: var(--color-brown-dark);
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+    color: #6d5f57;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 40px 5%;
+    background-color: var(--color-brown-dark);
+    color: var(--color-cream);
+}
+
+.footer .section-title {
+    color: var(--color-white);
+    border-bottom-color: var(--color-brown-light);
+}
+
+.footer p {
+    margin: 15px 0;
+}
+
+.contact-links a {
+    color: var(--color-cream);
+    margin: 0 10px;
+    font-weight: 300;
+}
+
+.contact-links a:hover {
+    color: var(--color-brown-light);
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--color-brown-light);
+}
+
+/* --- Dynamic Dot Styling (Particles) --- */
+#dot-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.dot {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--color-brown-light);
+    opacity: 0.6;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+}
+
+.dot.large {
+    width: 30px;
+    height: 30px;
+}
+.dot.medium {
+    width: 20px;
+    height: 20px;
+}
+.dot.small {
+    width: 10px;
+    height: 10px;
+    opacity: 0.8;
+}
+
+/* --- Media Queries (Responsiveness) --- */
+@media (max-width: 1024px) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .hero-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .hero-left, .hero-right {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 0;
+    }
+    .idphoto {
+        transform: translateX(0%);
+        margin: 0 auto;
+        width: 250px;
+        height: 250px;
+        border-width: 12px;
+    }
+    .hero-left {
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .portfolio-heading {
+        font-size: 2.8rem;
+    }
+    .hero-name {
+        font-size: 1.8rem;
+    }
+    .hero-right {
+        order: 2;
+    }
+    .hero-section::before,
+    .hero-section::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar nav {
+        padding-top: 10px;
+    }
+    .navbar nav a {
+        margin: 0 10px;
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    .portfolio-heading {
+        font-size: 2.5rem;
+    }
+    .hero-name {
+        font-size: 1.6rem;
+    }
+    .hero-role-badge {
+        font-size: 1rem;
+        padding: 6px 20px;
+    }
+}

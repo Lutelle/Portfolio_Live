@@ -195,10 +195,12 @@ a:hover {
     background-color: var(--color-white);
 }
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.skills-container.project-grid {
+    display: flex; 
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -218,6 +220,59 @@ a:hover {
     margin-bottom: 15px;
     color: #6d5f57;
 }
+
+/* --- Skill Item --- */
+
+.skills-container .project-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    border-left: none;
+    box-shadow: none;
+    background-color: transparent;
+    justify-content: center;
+}
+
+.skills-container .project-card h3 {
+    grid-column: 1 / -1;
+    margin-bottom: 0px;
+}
+
+.skills-container .project-card .item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    background-color: var(--color-white);
+    padding: 20px 10px; /* Increased padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    width: 100%; 
+    height: 120px; /* Increased from 100px */
+    margin: 0;
+    gap: 8px; /* Slightly increased gap */
+    transition: transform 0.2s;
+}
+
+.skills-container .project-card .item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-logo {
+    width: 40px; 
+    height: 40px; 
+    object-fit: contain; 
+}
+
+.item p {
+    margin: 0; 
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 500;
+}
+
 
 /* --- Footer --- */
 .footer {
@@ -353,5 +408,9 @@ a:hover {
     .hero-role-badge {
         font-size: 1rem;
         padding: 6px 20px;
+    }
+    .skills-container .project-card {
+        grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
+        justify-content: center;
     }
 }
